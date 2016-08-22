@@ -17,7 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // More info: https://visionmedia.github.io/page.js/
 
     // Removes end / from app.baseUrl which page.base requires for production
-    if (window.location.port === '') {  // if production
+    if (window.location.port === '') { // if production
       page.base(app.baseUrl.replace(/\/$/, ''));
     }
 
@@ -32,7 +32,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       next();
     }
 
-    function setFocus(selected){
+    function setFocus(selected) {
       Polymer.dom(document)
         .querySelector('section[data-route="' + selected + '"] .focus-target')
         .focus();
@@ -53,14 +53,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       setFocus(app.route);
     });
 
-    page('/users', function() {
-      app.route = 'users';
-      setFocus(app.route);
-    });
-
-    page('/users/:name', function(data) {
-      app.route = 'user-info';
-      app.params = data.params;
+    page('/ad01', function() {
+      app.route = 'ad01';
       setFocus(app.route);
     });
 
@@ -71,7 +65,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     // 404
     page('*', function() {
-      app.$.toast.text = 'Can\'t find: ' + window.location.href  + '. Redirected you to Home Page';
+      app.$.toast.text = 'Can\'t find: ' + window.location.href + '. Redirected you to Home Page';
       app.$.toast.show();
       page.redirect(app.baseUrl);
     });

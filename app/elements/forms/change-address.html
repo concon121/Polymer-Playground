@@ -1,0 +1,50 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/gold-uk-postcode-input/gold-uk-postcode-input.html">
+
+<dom-module id="change-address">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      span,
+      input {
+        @apply(--paper-font-body2);
+      }
+    </style>
+
+    <h1 class="page-title" tabindex="-1">{{title}}</h1>
+
+    <form is="iron-form" id="change-address-form" method="post" action="#">
+      <paper-input label="Line 1:"></paper-input>
+      <paper-input label="Line 2:"></paper-input>
+      <paper-input label="Line 3:"></paper-input>
+      <paper-input label="Line 4:"></paper-input>
+      <gold-uk-postcode-input label="Postcode" auto-validate="true" error-message="Not a valid UK postcode!"></gold-uk-postcode-input>
+      <paper-button raised>Submit</paper-button>
+      <!--<paper-button raised onclick="submitForm()">Submit</paper-button>-->
+    </form>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'change-address',
+
+        properties: {
+          title: {
+            type: String,
+            value: 'Change Registered Address',
+            notify: true
+          }
+        }
+      });
+    })();
+  </script>
+</dom-module>
