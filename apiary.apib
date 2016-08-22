@@ -1,0 +1,44 @@
+FORMAT: 1A
+HOST: http://sqk.apiblueprint.org/
+
+# SQK
+
+TODO.
+
+## Address Collection [/address]
+
+### Change Address [POST]
+
+Change your registered address.
+
++ Request (application/json)
+
+        {
+            "id": "12345",
+            "line_one": "19 Test Road",
+            "line_two": "Imagination Station",
+            "line_three": "Nowheresville",
+            "line_four": "Kingdom of None",
+            "postcode": "abc123"
+        }
+
++ Response 200
+
+## Address [/address/{id}]
+
++ Parameters
+
+  + id (number) - Your company id. 
+  
+### Get an address [GET]
+
++ Response 200 (application/json)
+
+        {
+            "id": "12345",
+            "line_one": "19 Test Road",
+            "line_two": "Imagination Station",
+            "line_three": "Nowheresville",
+            "line_four": "Kingdom of None",
+            "postcode": "abc123"
+        }
