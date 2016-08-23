@@ -19,14 +19,13 @@
 
     <h1 class="page-title" tabindex="-1">{{title}}</h1>
 
-    <form is="iron-form" id="change-address-form" method="post" action="#">
+    <form is="iron-form" id="change-address-form" method="post">
       <paper-input label="Line 1:"></paper-input>
       <paper-input label="Line 2:"></paper-input>
       <paper-input label="Line 3:"></paper-input>
       <paper-input label="Line 4:"></paper-input>
       <gold-uk-postcode-input label="Postcode" auto-validate="true" error-message="Not a valid UK postcode!"></gold-uk-postcode-input>
       <paper-button raised>Submit</paper-button>
-      <!--<paper-button raised onclick="submitForm()">Submit</paper-button>-->
     </form>
   </template>
 
