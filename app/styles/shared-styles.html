@@ -25,8 +25,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
 
-      paper-menu a > *, paper-menu paper-item > *, paper-menu paper-icon-item > * {
+      paper-menu a> *,
+      paper-menu paper-item> *,
+      paper-menu paper-icon-item> * {
         pointer-events: none;
+      }
+
+      paper-button {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 20px;
+      }
+
+      universal-footer {
+        border: 2px solid #EEEEEE;
+        color: var(--primary-text-color);
+        background-color: var(--primary-background-color);
+      }
+
+      universal-footer a {
+        color: var(--accent-color);
+        text-decoration: none;
+        margin-right: 10px;
+      }
+
+      universal-footer a:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
       }
 
       @media (max-width: 600px) {
